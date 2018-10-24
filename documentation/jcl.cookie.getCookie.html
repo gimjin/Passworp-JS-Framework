@@ -1,0 +1,31 @@
+<p>jcl.getCookie(name:String):String<p>
+<xmp>
+
+【参数】
+
+name:String    cookie名字
+
+【返回值】
+
+String  cookie的值
+
+【功能】
+
+获得cookie值
+
+【使用方法】
+
+<script type="text/javascript">
+jcl.setCookie({
+	name:    'cookiename',
+	val:     'jcl',
+	expires: 1,//过期时间1天
+	path:    '/',
+	domain:  'yourdomain.com',
+	secure:  false
+});
+
+alert(jcl.getCookie('cookiename'));//jcl
+</script>
+
+</xmp>

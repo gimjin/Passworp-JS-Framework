@@ -1,0 +1,33 @@
+<p>jcl.textAddPack(str:String, textElem:textNode, elem:elementObject):Void<p>
+<xmp>
+
+【参数】
+
+str:String
+textElem:textNode 可以用childNode获得nodeType = 3就是文本节点，也可以用jcl.textNodes()方法获得。
+elem:String 要添加的外壳  如:"<em style='color:red;'></em>"
+
+【返回值】
+
+无
+
+【功能】
+
+给textNodes里面的相应的文本加上外壳，可以制作编辑器，也可以制作文本高亮的页面搜索功能。
+
+【使用方法】
+
+<div id="book">
+	天气很好啊
+	<span>今天天气</span>
+	<p>今天不能下雨</p>
+	<p>今天天气很好</p>
+</div>
+<script type="text/javascript">
+var textArr = jcl.textNodes('天气', document.getElementById('book'));
+for(var i=0; i<textArr.length; i++){
+	jcl.textAddPack('天气', textArr[i], "<em style='color:red;'></em>")
+}
+</script>
+
+</xmp>

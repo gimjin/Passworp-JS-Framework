@@ -1,0 +1,27 @@
+<p><i>selector.</i>delOutBefore():elementObject<p>
+<xmp>
+
+【参数】
+
+无
+
+【返回值】
+
+elementObject
+
+【功能】
+
+删除selector外部临近上面的标签
+
+【使用方法】
+
+<div>这个会被删掉</div>
+<div id='box' title='盒子'>盒子</div>
+
+<script type="text/javascript">
+var fanhui = jcl('id', 'box').delOutBefore();
+//<div id='box' title='盒子'></div>
+alert(fanhui.title);//盒子
+</script>
+
+</xmp>

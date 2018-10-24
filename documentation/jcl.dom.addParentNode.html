@@ -1,0 +1,31 @@
+<p><i>selector.</i>addParentNode(elem:String):Array<p>
+<xmp>
+
+【参数】
+
+elem:String   如: "<div style='border:1px solid #000;'></div>"
+
+【返回值】
+
+index=0  selector的elementObject
+index=1  elem的elementObject
+
+【功能】
+
+给选择器添加父节点，只能添加一层，如果要添加多层，用返回值循环添加
+
+【使用方法】
+
+<div id='box'>
+	<em title="em">1</em>
+	<span>1</span>
+</div>
+
+<script type="text/javascript">
+var fanhui = jcl(null, null, 'em').addParentNode("<div style='border:1px solid #000;'></div>");
+
+alert(fanhui[0].title);//em
+alert(fanhui[1].tagName);//DIV
+</script>
+
+</xmp>

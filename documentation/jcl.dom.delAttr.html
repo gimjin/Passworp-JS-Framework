@@ -1,0 +1,30 @@
+<p><i>selector.</i>delAttr(name:String, val:String):elementObject<p>
+<xmp>
+
+【参数】
+
+name:String
+属性名称
+
+val:String
+属性值
+
+【返回值】
+
+elementObject
+
+【功能】
+
+删除属性值
+
+【使用方法】
+
+<input type='text' class='test hello' value='你好'/>
+
+<script type="text/javascript">
+jcl('class', 'test').addAttr('class', 'hi');
+var fanhui = jcl('class', 'test').delAttr('class', 'hello');
+alert(fanhui.value);//你好
+</script>
+
+</xmp>

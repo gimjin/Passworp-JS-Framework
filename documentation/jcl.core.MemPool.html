@@ -1,0 +1,29 @@
+<p>jcl.MemPool<p>
+<xmp>
+
+【参数】
+
+无
+
+【返回值】
+
+无
+
+【功能】
+
+添加jcl的内存池，确保在任何地方都可以访问到。可以与jcl.md5方法互相结合生成出唯一的内存池名称。
+但是不能滥用，因为这相当于全局变量。
+
+【注意】
+
+请不要使用jcl开头的名称，如:jcl.MemPool.jclany = "请不要这样使用"
+
+【使用方法】
+
+<script type="text/javascript">
+jcl.MemPool.myMemPool = '这里是内存池';
+alert(jcl.MemPool.myMemPool)
+</script>
+更多的高级应用看jcl.js里的jcl.ajax()使用方法。
+
+</xmp>

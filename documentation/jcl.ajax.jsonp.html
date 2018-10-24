@@ -1,0 +1,29 @@
+<p>jcl.jsonp(url:String):String<p>
+<xmp>
+
+【参数】
+
+url:String    请求的URL
+
+【返回值】
+
+Function name and json 如:getData({name:'金成林'})
+getData()是你自己写的方法
+{name:'金成林'}是在服务器自动生成的数据
+
+【功能】
+
+跨域请求服务器，但不是ajax形式。
+
+【使用方法】
+
+<script type="text/javascript">
+function getData(data){
+	alert(data.name);
+}
+jcl.jsonp('http://code.google.com/p/passworp-jcl/');//getData({name:'金成林'})
+</script>
+请求URL返回   getData({name:'金成林'})   这样的数据然后自动运行
+如果不明白的话google.com或者baidu.com查一下jsonp
+
+</xmp>

@@ -1,0 +1,25 @@
+<p>jcl.jclo(elementObject:elementObject):jclObject<p>
+<xmp>
+
+【参数】
+
+elementObject:elementObject
+
+【返回值】
+
+jclObject
+
+【功能】
+
+elementObject转换成jclObject
+
+【使用方法】
+
+<div id="test">成功</div>
+<script type="text/javascript">
+var myJCLO =  document.getElementById('test');
+//document.getElementById('test').html();//不能这样使用因为elementObject没有html()方法
+alert(jcl.jclo(myJCLO).html());
+</script>
+
+</xmp>

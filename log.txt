@@ -1,0 +1,16 @@
+1.0.0(beta)~1.0.1
+增加addParentNode
+增加delParentNode
+增加delCookie
+修改setCookie中的bug
+修改exchang 的返回值
+修改objToStr中的bug
+修改opera不支持caller的bug
+
+1.0.1~1.0.2(圣诞完整版)
+用javascript反射，替代eval  (花火,QQ:100100759)
+修改在firefox挂onreadystatechange事件的时候先运行方法而造成AJAX超时的BUG
+增加domReady方法 (JS菜菜,QQ:23154623)
+增加animate方法
+修改effect里面的所有方法用animate方法扩展,并增加注册点功能  (花火,QQ:100100759)
+部分代码优化

@@ -1,0 +1,36 @@
+<p>jcl.delCookie():Void<p>
+<xmp>
+
+【参数】
+
+无
+
+【返回值】
+
+无
+
+【功能】
+
+删除cookie
+
+【使用方法】
+
+<script type="text/javascript">
+jcl.setCookie({
+	name:    'cookiename',
+	val:     'jcl',
+	expires: 1,//过期时间1天
+	path:    '/',
+	domain:  'http://127.0.0.1',
+	secure:  false
+});
+
+alert(jcl.getCookie('cookiename'));//jcl
+
+jcl.delCookie('cookiename');
+
+alert(jcl.getCookie('cookiename'));
+alert(document.cookie);
+</script>
+
+</xmp>

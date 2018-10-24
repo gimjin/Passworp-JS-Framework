@@ -1,0 +1,26 @@
+<p><i>selector.</i>delClass(val:String):elementObject<p>
+<xmp>
+
+【参数】
+
+val:String
+class属性值
+
+【返回值】
+
+elementObject
+
+【功能】
+
+删除class值
+
+【使用方法】
+
+<input type="text" id="hi" value="你好" class="test1 test2"/>
+
+<script type="text/javascript">
+var fanhui = jcl('id', 'hi').delClass('test1');//<input type="text" id="hi" value="你好" class="test2"/>
+alert(fanhui.value);//你好
+</script>
+
+</xmp>

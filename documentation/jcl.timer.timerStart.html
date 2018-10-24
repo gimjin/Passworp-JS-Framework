@@ -1,0 +1,48 @@
+<p>jcl.timerStart(fn:Function, time:Number, iterator:Number):Handle<p>
+<xmp>
+
+【参数】
+
+fn:Function       要执行的方法名
+time:Number       毫秒数(1000 = 1秒)
+iterator:Number   周期循环次数（如果为空，就会不停的执行）
+
+【返回值】
+
+Handle 周期性执行的值,用这个值和jcl.timerStop()取消时间周期
+
+【功能】
+
+周期性的执行指定方法
+
+【使用方法】
+
+(1)限定次数
+<script type="text/javascript">
+function shici(){
+	alert('执行10次');
+}
+jcl.timerStart(shici, 5000, 10);
+</script>
+
+(2)不限定次数
+<script type="text/javascript">
+function nci(){
+	alert('执行N次');
+}
+jcl.timerStart(nci, 5000);
+</script>
+
+(3)执行时取消
+<script type="text/javascript">
+function nci(){
+	alert('click 取消按钮');
+}
+var handle = jcl.timerStart(nci, 5000);
+function cancel(){
+	jcl.timerStop(handle);
+}
+</script>
+<input type="button" value="取消" onclick="cancel()"/>
+
+</xmp>

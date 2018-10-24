@@ -1,0 +1,29 @@
+<p><i>selector.</i>delParentNode():elementObject<p>
+<xmp>
+
+【参数】
+
+无
+
+【返回值】
+
+selector的elementObject
+
+【功能】
+
+删除选择器的父节点，相当于删除外壳
+
+【使用方法】
+
+<div id='box'>
+	<em title="em">1</em>
+	<span>1</span>
+</div>
+
+<script type="text/javascript">
+var fanhui = jcl(null, null, 'em').delParentNode();
+
+alert(fanhui.title);//em
+</script>
+
+</xmp>

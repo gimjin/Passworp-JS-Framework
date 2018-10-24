@@ -1,0 +1,38 @@
+<p>jcl.designMode(<i>elem:elementObject</i>):Void<p>
+<xmp>
+
+【参数】
+
+elem:elementObject   如：window.frames[0] 或 document.getElementById(iframeid)
+
+【返回值】
+
+无
+
+【功能】
+
+启动编辑模式，如网页编辑器。
+
+【使用方法】
+
+使用方法1：
+<!--自己做一个iframe.html放在同一个目录下-->
+<iframe src="iframe.html" id="myFrame" width="200" height="200" onload="loaded()"></iframe>
+<script type="text/javascript">
+//iframe页面启动编辑模式
+function loaded(){
+	var myFrame = jcl('id', 'myFrame').eval();
+	jcl.designMode(myFrame);
+}
+</script>
+
+
+使用方法2：
+<script type="text/javascript">
+//当前页面启动编辑模式
+jcl.ready(function(){
+	jcl.designMode();
+})
+</script>
+
+</xmp>

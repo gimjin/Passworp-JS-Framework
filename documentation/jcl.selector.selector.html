@@ -1,0 +1,49 @@
+<p>jcl(name:String, val:String, tag:String, elem:elementObject, index:Number):jclObject<p>
+<xmp>
+
+【参数】
+
+name:String        属性名 如:id, class, title, type, ...
+val:String         属性值
+tag:String         Tag名 如:div, span
+elem:elementObject 如:document.getElementById('test')里面
+index:Number       第几个元素
+
+【返回值】
+
+jclObject
+
+【功能】
+
+选择节点
+
+【使用方法】
+
+<div id="box">
+	<div class="red" title="red" style="color:red;">选择了第一个</div>
+	<div class="red" title="red" style="color:red;">这个index是1</div>
+	<div class="red" title="red" style="color:red;">没有选择这个</div>
+</div>
+<div class="red" title="red">没有选择这个</div>
+<span>这是span</span>
+
+<script type="text/javascript">
+//写法1
+var x1 = jcl('class', 'red', 'div', document.getElementById('box'), 1).html();
+alert(x1);
+
+//写法2
+var x2 = jcl('class', 'red', 'div', document.getElementById('box')).html();//没有精确到个的话，选择第一个
+alert(x2);
+
+//写法3
+var x3 = jcl(null, null, 'span').html();//没有精确到个的话，选择第一个
+alert(x3);
+
+//写法4：如果选择了很多就可以用selector.each()来遍历整个节点，如果不遍历会默认选择第一个
+jcl().each(function(){
+	alert(jcl(this).html());//jcl()没有参数返回所有的节点
+})
+</script>
+
+</xmp>

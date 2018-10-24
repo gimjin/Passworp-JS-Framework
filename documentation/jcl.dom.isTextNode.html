@@ -1,0 +1,45 @@
+<p>jcl.isTextNode(elem:elementObject):Boolean<p>
+<xmp>
+
+【参数】
+
+elem:elementObject
+
+【返回值】
+
+Boolean
+
+【功能】
+
+判断是否是textNode，弥补了回车符换行符mozilla都认为nodeType是3的Bug
+
+【使用方法】
+
+<div id="mozilla">
+	
+</div>
+<div id="ie">
+	你好
+	<span>你好</span>
+</div>
+<script type="text/javascript">
+var childs = document.getElementById('mozilla').childNodes;
+alert('因为mozilla换行符也要检测所以，先检测mozilla');
+for(var i=0; i<childs.length; i++){
+	alert("nodeType=" + childs[i].nodeType + '| 是文本节点吗？' + jcl.isTextNode(childs[i]) + ' | 虽然是nodeType是3但他是回车符所以不认为是文本节点');
+}
+
+
+var childs = document.getElementById('ie').childNodes;
+alert('检测ie');
+for(var i=0; i<childs.length; i++){
+	if(i==2){
+		alert("nodeType=" + childs[i].nodeType + '| 是文本节点吗？' + jcl.isTextNode(childs[i]) + ' | 虽然是nodeType是3但他是空格符所以不认为是文本节点');
+	}else{
+		alert("nodeType=" + childs[i].nodeType + '| 是文本节点吗？' + jcl.isTextNode(childs[i]));
+	}
+	
+}
+</script>
+
+</xmp>

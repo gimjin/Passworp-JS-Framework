@@ -1,0 +1,43 @@
+<p><i>selector.</i>clone():Array<p>
+<xmp>
+
+【参数】
+
+无
+
+【返回值】
+
+index=0 selector的elementObject
+index=1 存在于内存中复制后的节点elementObject
+
+【功能】
+
+复制节点树
+
+【使用方法】
+
+第一种使用方法
+<div id='top' title='is top'>
+	<em title="em">复制体</em>
+</div>
+<div id='box'></div>
+
+<script type="text/javascript">
+var fanhui = jcl('id', 'top').clone();
+alert(fanhui[0].title);//is top
+jcl('id', 'box').inBefore(fanhui[1]);
+</script>
+
+第二种使用方法
+<div id='top' title='is top'>
+	<em title="em">复制体</em>
+</div>
+<div id='box'></div>
+
+<script type="text/javascript">
+var fanhui = jcl.clone(document.getElementById('top'));
+alert(fanhui[0].title);//is top
+jcl('id', 'box').inBefore(fanhui[1]);
+</script>
+
+</xmp>

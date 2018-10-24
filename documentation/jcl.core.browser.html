@@ -1,0 +1,30 @@
+<p>jcl.browser(browser:String):Boolean/String<p>
+<xmp>
+
+【参数】
+
+browser:String
+
+可填项
+'version' 浏览器版本
+'dtd'     是否添加DTD头部(注意Firefox如果没有加DTD，会加上默认的DTD。)
+'msie'    是否是IE
+'mozilla' 是否是Mozilla内核
+'opera'   是否是opera
+'safari'  是否是safari
+
+【返回值】
+
+Boolean/String
+
+【功能】
+
+检测浏览器版本、浏览器类型、DTD。
+
+【使用方法】
+
+<script type="text/javascript">
+alert(jcl.browser('msie'));//用IE看就是返回true，其他的都返回false
+</script>
+
+</xmp>

@@ -1,0 +1,30 @@
+<p><i>selector.</i>top(<i>[val:Number]</i>):Number<p>
+<xmp>
+
+【参数】
+
+无或者
+val:Number 
+
+【返回值】
+
+Number，top的值
+
+【功能】
+
+设置或获得top值
+
+【使用方法】
+
+<style type="text/css">
+#red{position:relative;top:20px;}
+</style>
+<div id="red">内容</div>
+<script type="text/javascript">
+var l = jcl('id', 'red');
+alert(l.top());//20
+l.top(40);
+alert(l.top());//40
+</script>
+
+</xmp>

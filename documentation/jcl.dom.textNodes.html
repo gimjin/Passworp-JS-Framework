@@ -1,0 +1,48 @@
+<p>jcl.textNodes(str:String, elem:elementObject):Array<p>
+<xmp>
+
+【参数】
+
+str:String
+elem:elementObject (默认值：document.getElementsByTagName('body')[0])
+
+【返回值】
+
+textNode Array
+
+【功能】
+
+返回在elem里包含str值的所有文本节点textNodes
+
+【使用方法】
+
+方法1：
+<div id="book">
+	你好
+	<span>你好先生</span>
+	<p>是的我很好</p>
+	
+</div>
+<script type="text/javascript">
+var textArr = jcl.textNodes('你好', document.getElementById('book'));
+for(var i=0; i<textArr.length; i++){
+	alert(textArr[i].data.toString())
+}
+</script>
+
+方法2：
+<div id="book">
+	你好
+	<span>你好先生</span>
+	<p>是的我很好</p>
+	
+</div>
+<script type="text/javascript">
+//如果第一个参数为空字符串，就会匹配所有的textnode
+var textArr = jcl.textNodes('', document.getElementById('book'));
+for(var i=0; i<textArr.length; i++){
+	alert(textArr[i].data.toString())
+}
+</script>
+
+</xmp>

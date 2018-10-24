@@ -1,0 +1,26 @@
+<p><i>selector.</i>eval():elementObject<p>
+<xmp>
+
+【参数】
+
+无
+
+【返回值】
+
+elementObject
+如：document.getElementById("jcl")
+非：jclObject
+
+【功能】
+
+可以把jclObject转换成elementObject，使用javascript的方法。
+
+【使用方法】
+
+<input type='text' id='test' value=''/>
+
+<script type="text/javascript">
+alert(jcl('id', 'test').eval() === document.getElementById('test'));//true
+</script>
+
+</xmp>

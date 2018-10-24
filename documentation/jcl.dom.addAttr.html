@@ -1,0 +1,33 @@
+<p><i>selector.</i>addAttr(name:String, val:String):elementObject<p>
+<xmp>
+
+【参数】
+
+name:String
+属性名称
+
+val:String
+属性值
+
+【返回值】
+
+elementObject
+
+【功能】
+
+设置添加属性值
+
+【注意】
+
+请不要使用此代码添加事件，添加事件请看jcl.Event
+
+【使用方法】
+
+<input type="text" class='test' value="你好"/>
+
+<script type="text/javascript">
+var fanhui = jcl('class', 'test').addAttr('class', 'hi');
+alert(fanhui.value);//你好
+</script>
+
+</xmp>

@@ -1,0 +1,30 @@
+<p>jcl.timerStop(handle:Handle):Void<p>
+<xmp>
+
+【参数】
+
+handle:Handle    jcl.timerStart()的返回值
+
+【返回值】
+
+无
+
+【功能】
+
+取消用jcl.timerStart()开始的时间周期。
+
+【使用方法】
+
+执行时取消
+<script type="text/javascript">
+function nci(){
+	alert('click 取消按钮');
+}
+var handle = jcl.timerStart(nci, 5000);
+function cancel(){
+	jcl.timerStop(handle);
+}
+</script>
+<input type="button" value="取消" onclick="cancel()"/>
+
+</xmp>

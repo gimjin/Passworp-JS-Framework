@@ -1,0 +1,34 @@
+<p>jcl.addEvent(elem:elementObject, event:String, fn:Function, bubble:Boolean):Void<p>
+<xmp>
+
+【参数】
+
+elem:elementObject  需要添加事件的节点
+event:String        事件类型 [click, mouseover, blur, focus, ...]这些方法类型是javascript的类型，去掉on
+fn:Function         需要执行的方法
+bubble:Boolean      IE没有这个属性，所以大部分时候不需要这个。true是捕获阶段，false（默认）是冒泡阶段
+
+【返回值】
+
+无
+
+【功能】
+
+添加事件
+
+【使用方法】
+
+<input type="button" value="触发事件" id="shijian" />
+<script type="text/javascript">
+function hi(){
+	alert(jcl.getEvent().target.tagName);
+}
+jcl.addEvent(
+	document.getElementById('shijian'),
+	'click',
+	hi,
+	false
+);
+</script>
+
+</xmp>

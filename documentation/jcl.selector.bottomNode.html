@@ -1,0 +1,30 @@
+<p><i>selector.</i>bottomNode():jclObject<p>
+<xmp>
+
+【参数】
+
+无
+
+【返回值】
+
+选择器内部下面的jclObject
+
+【功能】
+
+选择内部下面的节点
+
+【使用方法】
+
+<div id='prev'>prev</div>
+<div id='sel'>
+	<span>top</span>
+	<span>middle</span>
+	<span>bottom</span>
+</div>
+<div id='next'>next</div>
+
+<script type="text/javascript">
+jcl('id', 'sel').bottomNode().html('这里是bottom');
+</script>
+
+</xmp>

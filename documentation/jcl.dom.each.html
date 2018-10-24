@@ -1,0 +1,52 @@
+<p><i>selector.</i>each():elementObject<p>
+<xmp>
+
+【参数】
+
+无
+
+【返回值】
+
+无
+
+【功能】
+
+可以循环操作jclObject。
+
+【使用方法】
+
+<div class='test'>0</div>
+<div class='test'>1</div>
+<div class='test' title="index=2">2</div>
+<div class='test'>3</div>
+
+<script type="text/javascript">
+jcl('class', 'test').each(function(){
+	if(i == 2){
+		alert(jcl(this).eval().title);
+	}else{
+		jcl(this).eval().innerHTML = "index=" + i;//jcl(this)后面添加eval()就可以用javascript的方法
+		jcl(this).addAttr('class', 'myClass');//jcl(this)后面没有eval()的话用jcl的方法
+	}
+});
+</script>
+
+【相似使用方法-但不推荐】
+<div class='test'>0</div>
+<div class='test'>1</div>
+<div class='test' title="index=2">2</div>
+<div class='test'>3</div>
+
+<script type="text/javascript">
+var len = jcl('class', 'test').length();
+for(var i = 0; i < len; i++){
+	if(i == 2){
+		alert(jcl('class', 'test', null, null, i).eval().title);
+	}else{
+		jcl('class', 'test', null, null, i).eval().innerHTML = "index=" + i;//jcl(this)后面添加eval()就可以用javascript的方法
+		jcl('class', 'test', null, null, i).addAttr('class', 'myClass');//jcl(this)后面没有eval()的话用jcl的方法
+	}
+}
+</script>
+
+</xmp>

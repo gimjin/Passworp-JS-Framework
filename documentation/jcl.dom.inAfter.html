@@ -1,0 +1,57 @@
+﻿<p><i>selector.</i>inAfter(elem:String/elementObject):Array<p>
+<xmp>
+
+【参数】
+
+elem:String或者
+elem:elementObject
+
+【返回值】
+
+index=0  elem:String的时候返回elementObject数组
+         elem:elementObject的时候返回elementObject
+index=1  elem的elementObject
+
+【功能】
+
+把elem剪切到selector内部下面
+
+【使用方法】
+
+elem:elementObject的时候
+<div id='box'>
+	<em>1</em>
+	<span>1</span>
+</div>
+<div id='move' title='蛋糕'>蛋糕</div>
+
+<script type="text/javascript">
+var fanhui = jcl('id', 'box').inAfter(document.getElementById('move'));
+//<div id="box">
+//	<em>1</em>
+//	<span>1</span>
+//	<div id="move" title="蛋糕">蛋糕</div>
+//</div>
+alert(fanhui[0].id);//move
+alert(fanhui[1].id);//box
+</script>
+
+elem:String的时候
+<div id='box'>
+	<em>1</em>
+	<span>1</span>
+</div>
+
+<script type="text/javascript">
+var fanhui = jcl('id', 'box').inAfter("<div>蛋糕1</div><span style='color:red;' title='红色蛋糕'>红色蛋糕</span>");
+//<div id="box">
+//	<em>1</em>
+//	<span>1</span>
+//	<div>蛋糕1</div>
+//	<span style="color: red;" title="红色蛋糕">红色蛋糕</span>
+//</div>
+alert(fanhui[0][1].title);//红色蛋糕
+alert(fanhui[1].id);//box
+</script>
+
+</xmp>

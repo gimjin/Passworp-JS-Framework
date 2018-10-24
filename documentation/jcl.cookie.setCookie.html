@@ -1,0 +1,34 @@
+<p>jcl.setCookie(argument:Object):Void<p>
+<xmp>
+
+【参数】
+
+name:String    cookie名字
+val:String     cookie值
+expires:Number 1是一天的意思,默认值:365 day
+path:String    默认值'/',
+secure:Boolean 如果为true就只能在HTTPS下才能获取到，默认值是false
+
+【返回值】
+
+无
+
+【功能】
+
+设置cookie
+
+【使用方法】
+
+<script type="text/javascript">
+jcl.setCookie({
+	name:    'cookiename',
+	val:     'jcl',
+	expires: 1,//过期时间1天
+	path:    '/',
+	secure:  false
+});
+
+alert(jcl.getCookie('cookiename'));//jcl
+</script>
+
+</xmp>

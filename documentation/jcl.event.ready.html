@@ -1,0 +1,33 @@
+<p>jcl.ready(fu:Function):Void<p>
+<xmp>
+
+【参数】
+
+fn:Function   页面加载完毕后要执行的方法名
+
+【返回值】
+
+无
+
+【功能】
+
+页面加载完毕后执行方法，弥补了window.onload只能添加一次的缺点。
+
+【使用方法】
+
+<script type="text/javascript">
+function hi(){
+	alert(jcl('id','wanbi').html());
+}
+function wanbi(){
+	alert('加载完毕');
+}
+jcl.ready(wanbi);
+jcl.ready(hi);
+jcl.ready(function(){
+	alert('另类的写法，你也可以这么写');
+});
+</script>
+<div id="wanbi">script方法在div前面，但是可以检测到div，所以能看出是加载完毕后js执行了。</div>
+
+</xmp>

@@ -1,0 +1,30 @@
+<p><i>selector.</i>left(<i>[val:Number]</i>):Number<p>
+<xmp>
+
+【参数】
+
+无或者
+val:Number 
+
+【返回值】
+
+Number，left的值
+
+【功能】
+
+设置或获得left值
+
+【使用方法】
+
+<style type="text/css">
+#red{position:relative;left:20px;}
+</style>
+<div id="red">内容</div>
+<script type="text/javascript">
+var l = jcl('id', 'red');
+alert(l.left());//20
+l.left(40);
+alert(l.left());//40
+</script>
+
+</xmp>

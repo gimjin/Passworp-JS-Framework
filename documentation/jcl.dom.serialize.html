@@ -1,0 +1,29 @@
+<p><i>selector.</i>serialize():String<p>
+<xmp>
+
+【参数】
+
+无
+
+【返回值】
+
+form 序列字符串
+
+【功能】
+
+返回form序列字符串，如:aaa=aaa&bbb=bbb&c1=c
+
+【使用方法】
+
+<form id='myform'>
+	<input type='text' name='te' value='name'/>
+	<input type='hidden' name='hid' value='hidden'/>
+	<input type='radio' name='rad' value='radio' checked='checked'/>
+	<textarea name='ta'>textarea</textarea>
+</form>
+
+<script type="text/javascript">
+alert(jcl('id', 'myform').serialize());//te=name&hid=hidden&rad=radio&ta=textarea
+</script>
+
+</xmp>

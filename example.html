@@ -1,0 +1,26 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="utf-8" xml:lang="utf-8">
+<head>
+<title>example - http://code.google.com/p/passworp-jcl/</title>
+<script type="text/javascript" src="jcl-1.0.2.packer.js"></script>
+</head>
+<body>
+
+
+<div class="test" id="test" style="position:absolute;left:10px;top:50px;display:block;width:20px;height:50px;border:1px solid #000;"></div>
+<script type="text/javascript">
+//同时执行
+jcl('class', 'test').animateAlpha(2, 20)
+jcl('class', 'test').animateWidth(2, 100, 300)
+jcl('class', 'test').animateHeight(2, 10)
+jcl('class', 'test').animateLeft(2, 100)
+jcl('class', 'test').animateTop(2, 100, null, run1)
+//animateTop执行后执行
+function run1(){
+	jcl('class', 'test').animateAlpha(1, 100, null, function(){alert('动画结束')})
+}
+</script>
+
+
+</body>
+</html>

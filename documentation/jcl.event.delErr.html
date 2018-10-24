@@ -1,0 +1,26 @@
+<p>jcl.delErr():Void<p>
+<xmp>
+
+【参数】
+
+无
+
+【返回值】
+
+无
+
+【功能】
+
+隐藏错误提示
+
+【使用方法】
+
+<script type="text/javascript">
+jcl.delErr();//因为有这个所以不抛出错误，不相信就把这行删掉
+function hi(){
+	alert(jcl('id','wanbi').html());
+}
+hi('本应该抛出错误，但是你现在看不到了');
+</script>
+
+</xmp>

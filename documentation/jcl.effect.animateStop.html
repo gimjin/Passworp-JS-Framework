@@ -1,0 +1,31 @@
+<p><i>selector.</i>animateLeft(handle:Handle):Void<p>
+<xmp>
+
+【参数】
+
+handle:Handle
+
+【返回值】
+
+无
+
+【功能】
+
+停止动画
+
+【使用方法】
+
+<div class="test" id="test" style="position:absolute;left:10px;top:50px;display:block;width:20px;height:50px;border:1px solid #000;"></div>
+<input type="button" value="停止动画" onclick="stop()"/>
+<script type="text/javascript">
+var handle = jcl('class', 'test').animateLeft(2, 0, 200, run1)
+//动画后执行
+function run1(){
+	jcl('class', 'test').animateHeight(1, 100, null, function(){alert('动画结束')})
+}
+function stop(){
+	jcl.animateStop(handle)
+}
+</script>
+
+</xmp>

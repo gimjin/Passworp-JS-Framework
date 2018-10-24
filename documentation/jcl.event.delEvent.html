@@ -1,0 +1,40 @@
+<p>jcl.delEvent(elem:elementObject, event:String, fn:Function, bubble:Boolean):Void<p>
+<xmp>
+
+【参数】
+
+elem:elementObject  需要取消事件的节点
+event:String        事件类型 [click, mouseover, blur, focus, ...]这些方法类型是javascript的类型，去掉on
+fn:Function         原来绑定的方法名
+bubble:Boolean      注意addEvent的时候用了什么，这里就得用什么。
+
+【返回值】
+
+无
+
+【功能】
+
+删除事件
+
+【使用方法】
+
+<input type="button" value="触发事件" id="shijian" />
+<script type="text/javascript">
+function hi(){
+	jcl.delEvent(
+		document.getElementById('shijian'),
+		'click',
+		hi,
+		false
+	);
+	alert('删除完毕！所以这个alert只能弹出一次')
+}
+jcl.addEvent(
+	document.getElementById('shijian'),
+	'click',
+	hi,
+	false
+);
+</script>
+
+</xmp>

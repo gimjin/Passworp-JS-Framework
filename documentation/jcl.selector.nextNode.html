@@ -1,0 +1,30 @@
+<p><i>selector.</i>nextNode():jclObject<p>
+<xmp>
+
+【参数】
+
+无
+
+【返回值】
+
+选择器外部下面的jclObject
+
+【功能】
+
+选择外部下面的节点
+
+【使用方法】
+
+<div id='prev'>prev</div>
+<div id='sel'>
+	<span>top</span>
+	<span>middle</span>
+	<span>bottom</span>
+</div>
+<div id='next'>next</div>
+
+<script type="text/javascript">
+jcl('id', 'sel').nextNode().html('这里是next');
+</script>
+
+</xmp>

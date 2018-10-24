@@ -1,0 +1,33 @@
+<p><i>selector.</i>replace(elem:elementObject):elementObject<p>
+<xmp>
+
+【参数】
+
+elem:elementObject
+
+【返回值】
+
+elem的elementObject
+
+【功能】
+
+替换节点
+
+【使用方法】
+
+<div id='top' title='is top'>
+	<em title="em">被替换</em>
+</div>
+<div id='bottom' title='is bottom'>
+	<span>替换成功</span>
+</div>
+
+<script type="text/javascript">
+var fanhui = jcl('id', 'top').replace(document.getElementById('bottom'));
+//<div id='bottom' title='is bottom'>
+//	<span>替换成功</span>
+//</div>
+alert(fanhui.id);//bottom
+</script>
+
+</xmp>

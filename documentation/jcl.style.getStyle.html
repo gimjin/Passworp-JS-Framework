@@ -1,0 +1,28 @@
+<p><i>selector.</i>getStyle():style<p>
+<xmp>
+
+【参数】
+
+无
+
+【返回值】
+
+无
+
+【功能】
+
+因为elementObject.style.width这样的写法只能获取HTML中写进去的style才能获取到
+getStyle()是可以获取外部内部的所有style
+
+【使用方法】
+
+<style type="text/css">
+#red{width:20px;}
+</style>
+<div id="red">变成红色,不是粗体</div>
+<script type="text/javascript">
+alert(document.getElementById('red').style.width);//什么都没有
+alert(jcl('id', 'red').getStyle().width);//20px 如果不要px 就用 parseInt()方法
+</script>
+
+</xmp>

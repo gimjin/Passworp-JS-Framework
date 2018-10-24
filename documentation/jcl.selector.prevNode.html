@@ -1,0 +1,30 @@
+<p><i>selector.</i>prevNode():jclObject<p>
+<xmp>
+
+【参数】
+
+无
+
+【返回值】
+
+选择器外部上面的jclObject
+
+【功能】
+
+选择外部上面的节点
+
+【使用方法】
+
+<div id='prev'>prev</div>
+<div id='sel'>
+	<span>top</span>
+	<span>middle</span>
+	<span>bottom</span>
+</div>
+<div id='next'>next</div>
+
+<script type="text/javascript">
+jcl('id', 'sel').prevNode().html('这里是prev');
+</script>
+
+</xmp>

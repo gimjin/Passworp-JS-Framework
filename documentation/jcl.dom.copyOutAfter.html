@@ -1,0 +1,36 @@
+<p><i>selector.</i>copyOutAfter(elem:elementObject):elementObject<p>
+<xmp>
+
+【参数】
+
+elem:elementObject
+
+【返回值】
+
+elem的elementObject
+
+【功能】
+
+把elem复制到selector外部下面
+
+【使用方法】
+
+<div id='move' title='蛋糕'>蛋糕</div>
+<div id='box'>
+	<em>1</em>
+	<span>1</span>
+</div>
+
+<script type="text/javascript">
+var fanhui = jcl('id', 'box').copyOutAfter(document.getElementById('move'));
+//<div id="move" title="蛋糕">蛋糕</div>
+//<div id="box">
+//	<em>1</em>
+//	<span>1</span>
+//</div>
+//<div id="move" title="蛋糕">蛋糕</div>
+alert(fanhui[0].id);//move
+alert(fanhui[1].id);//box
+</script>
+
+</xmp>

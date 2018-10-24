@@ -1,0 +1,30 @@
+<p><i>selector.</i>alpha(<i>[val:Number]</i>):Number<p>
+<xmp>
+
+【参数】
+
+无或者
+val:Number (0-100)的值，100为不透明
+
+【返回值】
+
+Number，alpha的值
+
+【功能】
+
+设置或获得alpha值
+
+【使用方法】
+
+<style type="text/css">
+#red{width:100px;filter:alpha(opacity=20);opacity:0.2;-moz-opacity:0.2;}
+</style>
+<div id="red">内容</div>
+<script type="text/javascript">
+var l = jcl('id', 'red');
+alert(l.alpha());//20
+l.alpha(50);
+alert(l.alpha());//50
+</script>
+
+</xmp>

@@ -1,0 +1,61 @@
+<p>jcl.ajax(arguments:Object):Void<p>
+<xmp>
+
+【参数】
+
+url:String            请求的URL(必添项，其他参数都有默认值)
+param:String          发送的数据
+method:String         请求方式POST和GET
+dataType:String       'string'默认值 | 'json' | 'xml'
+expired:Number,minute 请求失败过期时间，这个时间内没有连接到服务器，就会执行timeOut方法
+success:Function      所有的都成功之后执行的方法
+disposal:Function     数据处理时执行的方法
+loaded:Function       已经加载完毕时执行方法
+loading:Function      正在加载时执行方法
+timeOut:Function      expired时间内连接服务器失败，就会执行这个方法
+cache:Number,minute   内存缓存时间
+bCache:Number,minute  浏览器缓存时间
+contentType:String    设置发送请求的content-type。默认值是 "application/x-www-form-urlencoded"，大多数情况不用修改
+async:Boolean         在默认的情况下，所有请求都是以异步的方式发送的（值为true）。如果要使用同步方式，需要将此项设置为false。
+
+【返回值】
+
+无
+
+【功能】
+
+ajax服务器请求与接收数据
+
+【使用方法】
+
+<script type="text/javascript">
+jcl.ajax({
+	url: 'http://code.google.com/p/passworp-jcl/',
+	param: 'name=kim&age=27',
+	method: 'GET',
+	expired: 10,
+	success: function(data){
+		alert(data)
+	},
+	disposal: function(){
+		alert('disposal');
+	},
+	loaded: function(){
+		alert('loaded');
+	},
+	loading: function(){
+		alert('loading');
+	},
+	timeOut: function(){
+		alert('timeOut');
+	},
+	cache: 10,
+	bCache: 10,
+	contentType: 'application/x-www-form-urlencoded',
+	async: true
+});
+
+</script>
+这是所有参数的集合，用户可以按自己的需求来设定参数。
+
+</xmp>

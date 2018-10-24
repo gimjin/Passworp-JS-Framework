@@ -1,0 +1,30 @@
+<p><i>selector.</i>topNode():jclObject<p>
+<xmp>
+
+【参数】
+
+无
+
+【返回值】
+
+选择器内部上面的jclObject
+
+【功能】
+
+选择内部上面的节点
+
+【使用方法】
+
+<div id='prev'>prev</div>
+<div id='sel'>
+	<span>top</span>
+	<span>middle</span>
+	<span>bottom</span>
+</div>
+<div id='next'>next</div>
+
+<script type="text/javascript">
+jcl('id', 'sel').topNode().html('这里是top');
+</script>
+
+</xmp>

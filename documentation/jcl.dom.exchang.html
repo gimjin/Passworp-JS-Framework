@@ -1,0 +1,38 @@
+<p><i>selector.</i>exchang(elem:elementObject):elementObject<p>
+<xmp>
+
+【参数】
+
+elem:elementObject
+
+【返回值】
+
+index=0  selector的elementObject
+index=1  elem的elementObject
+
+【功能】
+
+互换节点位置
+
+【使用方法】
+
+<div id='top' title='is top'>
+	<em title="em">下来了</em>
+</div>
+<div id='bottom'>
+	<span>上去了</span>
+</div>
+
+<script type="text/javascript">
+var fanhui = jcl('id', 'top').exchang(document.getElementById('bottom'));
+//<div id='bottom'>
+//	<span>上去了</span>
+//</div>
+//<div id='top' title='is top'>
+//	<em title="em">下来了</em>
+//</div>
+alert(fanhui[0].id);//top
+alert(fanhui[1].id);//bottom
+</script>
+
+</xmp>

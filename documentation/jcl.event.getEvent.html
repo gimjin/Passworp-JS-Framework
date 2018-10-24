@@ -1,0 +1,57 @@
+<p>jcl.getEvent():Void<p>
+<xmp>
+
+【参数】
+
+无
+
+【返回值】
+
+无
+
+【属性与方法】
+
+charCode                                       返回键盘charCode
+isChar                                         检测是否是键盘事件，如果是返回true否则false
+pageX                                          鼠标X坐标
+pageY                                          鼠标Y坐标
+time                                           时间
+target            原IE的srcElement             返回触发此事件的元素（事件的目标节点）
+relatedTarget     原IE的mouseout时toElement    返回与事件的目标节点相关的节点
+                       mouseover时fromElement
+preventDefault()  原IE的returnValue            通知浏览器不要执行与事件关联的默认动作
+stopPropagation() 原IE的cancelBubble           终止事件在传播过程的捕获、目标处理或起泡阶段进一步传播。调用该方法后，该节点上处理该事件的处理程序将被调用，事件不再被分派到其他节点。
+altKey
+bubbles
+button
+cancelBubble
+clientX
+clientY
+ctrlKey
+screenX
+screenY
+shiftKey
+type
+
+要了解更多请访问 http://www.w3school.com.cn/htmldom/dom_obj_event.asp
+
+【功能】
+
+统一IE与Mozilla事件的方法与属性,本来一样方法与属性都可以使用。
+
+【使用方法】
+
+<input type="button" value="触发事件" id="shijian" />
+<script type="text/javascript">
+function hi(){
+	alert(jcl.getEvent().target.tagName);
+}
+jcl.addEvent(
+	document.getElementById('shijian'),
+	'click',
+	hi,
+	false
+);
+</script>
+
+</xmp>

@@ -1,0 +1,50 @@
+<p><i>selector.</i>animateWidth(speed:Number, to:Number, from:Number, callback:Function):Handle<p>
+<xmp>
+
+【参数】
+
+speed:Number        速度(一般为2)
+to:Number           需要变化的值
+from:Number         设置默认值
+callback:Function   动画执行后，执行的方法
+
+【返回值】
+
+Handle 可以用这个停止动画
+
+【功能】
+
+width动画
+
+【使用方法】
+
+方法1:
+<div class="test" id="test" style="position:absolute;left:10px;top:50px;display:block;width:20px;height:50px;border:1px solid #000;"></div>
+<input type="button" value="停止动画" onclick="stop()"/>
+<script type="text/javascript">
+var handle = jcl('class', 'test').animateWidth(2, 500, null, run1)
+//动画后执行
+function run1(){
+	jcl('class', 'test').animateHeight(1, 100, null, function(){alert('动画结束')})
+}
+function stop(){
+	jcl.animateStop(handle)
+}
+</script>
+
+方法2(组合动画):
+<div class="test" id="test" style="position:absolute;left:10px;top:50px;display:block;width:20px;height:50px;border:1px solid #000;"></div>
+<script type="text/javascript">
+//同时执行
+jcl('class', 'test').animateAlpha(2, 20)
+jcl('class', 'test').animateWidth(2, 100, 300)
+jcl('class', 'test').animateHeight(2, 10)
+jcl('class', 'test').animateLeft(2, 100)
+jcl('class', 'test').animateTop(2, 100, null, run1)
+//animateTop执行后执行
+function run1(){
+	jcl('class', 'test').animateAlpha(1, 100, null, function(){alert('动画结束')})
+}
+</script>
+
+</xmp>

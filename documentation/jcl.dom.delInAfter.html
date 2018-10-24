@@ -1,0 +1,33 @@
+<p><i>selector.</i>delInAfter():elementObject<p>
+<xmp>
+
+【参数】
+
+无
+
+【返回值】
+
+elementObject
+
+【功能】
+
+删除selector内部最下面的子标签
+
+【使用方法】
+
+<div id='box' title='盒子'>
+	<em>em</em>
+	<span>span</span>
+	<div>div</div>
+</div>
+
+<script type="text/javascript">
+var fanhui = jcl('id', 'box').delInAfter();
+//<div title="盒子" id="box">
+//	<em>em</em>
+//	<span>span</span>
+//</div>
+alert(fanhui.title);//盒子
+</script>
+
+</xmp>

@@ -1,0 +1,27 @@
+<p><i>selector.</i>val(<i>val:String</i>):Void/String<p>
+<xmp>
+
+【参数】
+
+val:String
+获取选择器里面value值
+
+【返回值】
+
+设置val就没有返回值
+如果没有设置就返回选择器里面value值
+
+【功能】
+
+设置/获取选择器里面value值
+
+【使用方法】
+
+<input type="text" class='test' value="0"/>
+
+<script type="text/javascript">
+jcl('class', 'test').val('以修改');
+jcl('class', 'test').val();//以修改
+</script>
+
+</xmp>

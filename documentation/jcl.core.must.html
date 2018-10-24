@@ -1,0 +1,29 @@
+<p>jcl.must(arg1:String<i>[, arg2:参数, arg3:参数, ...]</i>):Void<p>
+<xmp>
+
+【参数】
+
+arg1:String
+arg2:参数
+arg3:参数
+...
+argn:参数
+
+【返回值】
+
+无
+
+【功能】
+
+检测方法参数必添项
+
+【使用方法】
+
+<script type="text/javascript">
+function get(name, sex, parent){
+	jcl.must('名字与性别是必添项', name, sex);
+}
+get('金成林');
+</script>
+
+</xmp>
